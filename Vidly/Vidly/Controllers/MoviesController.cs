@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+﻿using System.Collections.Generic;
 using System.Web.Mvc;
 using Vidly.Models;
 using Vidly.ViewModels;
@@ -10,17 +7,33 @@ namespace Vidly.Controllers
 {
     public class MoviesController : Controller
     {
+        public ViewResult Index()
+        {
+            var movies = GetMovies();
+
+            return View(movies);
+        }
+
+        private IEnumerable<Movie> GetMovies()
+        {
+            return new List<Movie>
+            {
+                new Movie { Id = 1, Name = "The Martian" },
+                new Movie { Id = 2, Name = "Django Unchained" }
+            };
+        }
+
         // GET: Movies/Random
         public ActionResult Random()
         {
-            var movie = new Movie() { Name = "Shrek!" };
+            var movie = new Movie() { Name = "The Martian" };
             var customers = new List<Customer>
             {
-                new Customer() {Name = "Customer 1"},
-                new Customer() {Name = "Customer 2"}
+                new Customer { Name = "Customer 1" },
+                new Customer { Name = "Customer 2" }
             };
 
-            var viewModel = new RandomMovieViewModel()
+            var viewModel = new RandomMovieViewModel
             {
                 Movie = movie,
                 Customers = customers
@@ -28,27 +41,5 @@ namespace Vidly.Controllers
 
             return View(viewModel);
         }
-
-        [Route("movies/released/{year}/{month:regex(\\d{2}):range(1, 12)}")]
-        public ActionResult ByReleaseDate(int year, int month)
-        {
-            return Content(year + "/" + month);
-        }
-
-        [Route("movies/")]
-        public ActionResult Movies()
-        {
-            var movies = new List<Movie>
-            {
-                new Movie() {Name = "The Martian"},
-                new Movie() {Name = "Django Unchained"}
-            };
-
-            var viewModel = new AllMoviesViewModel()
-            {
-                Movies = movies
-            };
-            return View(viewModel);
-        } 
     }
 }
