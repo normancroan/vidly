@@ -36,7 +36,7 @@ namespace Vidly.Controllers
         }
 
         [Route("movies/")]
-        public ActionResult All()
+        public ActionResult Movies()
         {
             var movies = new List<Movie>
             {
