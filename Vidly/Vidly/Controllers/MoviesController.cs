@@ -33,6 +33,22 @@ namespace Vidly.Controllers
         public ActionResult ByReleaseDate(int year, int month)
         {
             return Content(year + "/" + month);
+        }
+
+        [Route("movies/")]
+        public ActionResult All()
+        {
+            var movies = new List<Movie>
+            {
+                new Movie() {Name = "The Martian"},
+                new Movie() {Name = "Django Unchained"}
+            };
+
+            var viewModel = new AllMoviesViewModel()
+            {
+                Movies = movies
+            };
+            return View(viewModel);
         } 
     }
 }
