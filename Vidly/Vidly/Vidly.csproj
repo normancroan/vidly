@@ -223,10 +223,6 @@
     <Compile Include="Migrations\201702020126304_ApplyAnnotationsToCustomerName.Designer.cs">
       <DependentUpon>201702020126304_ApplyAnnotationsToCustomerName.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201702030149546_AddNameToMembershipTypes.cs" />
-    <Compile Include="Migrations\201702030149546_AddNameToMembershipTypes.Designer.cs">
-      <DependentUpon>201702030149546_AddNameToMembershipTypes.cs</DependentUpon>
-    </Compile>
     <Compile Include="Migrations\201702030159050_ModifyNameInMembershipType.cs" />
     <Compile Include="Migrations\201702030159050_ModifyNameInMembershipType.Designer.cs">
       <DependentUpon>201702030159050_ModifyNameInMembershipType.cs</DependentUpon>
@@ -234,6 +230,18 @@
     <Compile Include="Migrations\201702030208009_UpdateMembershipTypesSetNameByMembershipId.cs" />
     <Compile Include="Migrations\201702030208009_UpdateMembershipTypesSetNameByMembershipId.Designer.cs">
       <DependentUpon>201702030208009_UpdateMembershipTypesSetNameByMembershipId.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201702030221366_DropNameColumnInMembershipTypes.cs" />
+    <Compile Include="Migrations\201702030221366_DropNameColumnInMembershipTypes.Designer.cs">
+      <DependentUpon>201702030221366_DropNameColumnInMembershipTypes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201702030223403_AddNameViaModelUpdateMigrate.cs" />
+    <Compile Include="Migrations\201702030223403_AddNameViaModelUpdateMigrate.Designer.cs">
+      <DependentUpon>201702030223403_AddNameViaModelUpdateMigrate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201702030228240_UpdateNameInMembershipByIdAgain.cs" />
+    <Compile Include="Migrations\201702030228240_UpdateNameInMembershipByIdAgain.Designer.cs">
+      <DependentUpon>201702030228240_UpdateNameInMembershipByIdAgain.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -342,14 +350,20 @@
     <EmbeddedResource Include="Migrations\201702020126304_ApplyAnnotationsToCustomerName.resx">
       <DependentUpon>201702020126304_ApplyAnnotationsToCustomerName.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201702030149546_AddNameToMembershipTypes.resx">
-      <DependentUpon>201702030149546_AddNameToMembershipTypes.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201702030159050_ModifyNameInMembershipType.resx">
       <DependentUpon>201702030159050_ModifyNameInMembershipType.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201702030208009_UpdateMembershipTypesSetNameByMembershipId.resx">
       <DependentUpon>201702030208009_UpdateMembershipTypesSetNameByMembershipId.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201702030221366_DropNameColumnInMembershipTypes.resx">
+      <DependentUpon>201702030221366_DropNameColumnInMembershipTypes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201702030223403_AddNameViaModelUpdateMigrate.resx">
+      <DependentUpon>201702030223403_AddNameViaModelUpdateMigrate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201702030228240_UpdateNameInMembershipByIdAgain.resx">
+      <DependentUpon>201702030228240_UpdateNameInMembershipByIdAgain.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
